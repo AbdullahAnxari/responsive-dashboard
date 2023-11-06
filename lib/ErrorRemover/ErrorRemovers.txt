@@ -1,0 +1,19 @@
+the errors we got in GridView (i.e the grid boxes in dashboard project):
+    they are removed by changing the "childAspectRatio" 
+
+For Example:
+1) If the size of screen greater than 1400 than it will adjust with 1.1 and for smaller it will adjust 1.4
+ 
+ // --a value "greater than 1.0" will make cells wider than they are tall,
+ // --a value "less than 1.0" will make cells taller than they are wide.
+
+desktop: FileInfoCardGridView(childAspectRatio: _size.width < 1400 ? 1.1 : 1.4,),
+
+2) For mobile screen smalller than 650
+
+mobile: FileInfoCardGridView(
+
+       crossAxisCount: _size.width < 650 ? 2 : 4,
+       childAspectRatio: _size.width < 650 ? 1.3 : 1,
+                            
+                ),
